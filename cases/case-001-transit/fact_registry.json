@@ -1,0 +1,177 @@
+{
+  "case_id": "case-001-transit",
+  "title": "The Valdora Transit Decision",
+  "weight_formula": "relevance * strength",
+  "scale": {
+    "relevance": [
+      1,
+      4
+    ],
+    "strength": [
+      1,
+      4
+    ]
+  },
+  "facts": [
+    {
+      "id": "A01",
+      "direction": "A",
+      "text": "The electric-bus programme can begin carrying passengers 18 months after approval.",
+      "relevance": 4,
+      "strength": 2,
+      "weight": 8,
+      "dimension": "delivery_time",
+      "interpretation": "Strongly supports faster initial deployment of Option A."
+    },
+    {
+      "id": "A02",
+      "direction": "A",
+      "text": "Option A can increase service frequency on six existing routes rather than concentrating investment in one corridor.",
+      "relevance": 4,
+      "strength": 2,
+      "weight": 8,
+      "dimension": "network_coverage",
+      "interpretation": "Strongly supports wider geographic distribution of benefits."
+    },
+    {
+      "id": "A03",
+      "direction": "A",
+      "text": "Bus routes can be altered annually as residential and employment patterns change.",
+      "relevance": 3,
+      "strength": 2,
+      "weight": 6,
+      "dimension": "adaptability",
+      "interpretation": "Moderately supports flexibility under uncertain future demand."
+    },
+    {
+      "id": "A04",
+      "direction": "A",
+      "text": "The estimated initial capital cost of Option A is 38% lower than that of Option B.",
+      "relevance": 3,
+      "strength": 2,
+      "weight": 6,
+      "dimension": "capital_cost",
+      "interpretation": "Moderately supports lower initial financial commitment."
+    },
+    {
+      "id": "A05",
+      "direction": "A",
+      "text": "Eighty-two percent of current bus stops already meet the platform requirements for the new fleet.",
+      "relevance": 2,
+      "strength": 2,
+      "weight": 4,
+      "dimension": "existing_infrastructure",
+      "interpretation": "Provides limited-to-moderate support for easier integration."
+    },
+    {
+      "id": "A06",
+      "direction": "A",
+      "text": "The procurement contract permits vehicles to be added in small batches if demand grows.",
+      "relevance": 2,
+      "strength": 2,
+      "weight": 4,
+      "dimension": "scalability",
+      "interpretation": "Provides limited-to-moderate support for incremental expansion."
+    },
+    {
+      "id": "A07",
+      "direction": "A",
+      "text": "Two neighbouring fictional cities use compatible charging equipment.",
+      "relevance": 3,
+      "strength": 1,
+      "weight": 3,
+      "dimension": "regional_compatibility",
+      "interpretation": "Weakly supports maintenance and procurement compatibility."
+    },
+    {
+      "id": "A08",
+      "direction": "A",
+      "text": "A resident survey found slightly higher familiarity with improving bus services than with introducing light rail.",
+      "relevance": 3,
+      "strength": 1,
+      "weight": 3,
+      "dimension": "public_familiarity",
+      "interpretation": "Weakly supports easier public adoption; it is not a measure of actual performance."
+    },
+    {
+      "id": "B01",
+      "direction": "B",
+      "text": "The light rail corridor is projected to carry 46% more passengers per vehicle-hour than the electric-bus programme.",
+      "relevance": 4,
+      "strength": 2,
+      "weight": 8,
+      "dimension": "capacity",
+      "interpretation": "Strongly supports higher operating capacity for Option B."
+    },
+    {
+      "id": "B02",
+      "direction": "B",
+      "text": "Light rail journey times on the planned corridor are projected to vary less during peak congestion.",
+      "relevance": 4,
+      "strength": 2,
+      "weight": 8,
+      "dimension": "reliability",
+      "interpretation": "Strongly supports more predictable peak-hour travel."
+    },
+    {
+      "id": "B03",
+      "direction": "B",
+      "text": "The rail vehicles are expected to remain in service 11 years longer than the battery-electric buses.",
+      "relevance": 3,
+      "strength": 2,
+      "weight": 6,
+      "dimension": "asset_life",
+      "interpretation": "Moderately supports longer asset life, without alone establishing lower lifetime cost."
+    },
+    {
+      "id": "B04",
+      "direction": "B",
+      "text": "The central corridor contains 41% of the city's current public-transport boardings.",
+      "relevance": 3,
+      "strength": 2,
+      "weight": 6,
+      "dimension": "demand_concentration",
+      "interpretation": "Moderately supports concentrating investment where current demand is highest."
+    },
+    {
+      "id": "B05",
+      "direction": "B",
+      "text": "The light rail alignment has fully separated lanes for 72% of its length.",
+      "relevance": 2,
+      "strength": 2,
+      "weight": 4,
+      "dimension": "right_of_way",
+      "interpretation": "Provides limited-to-moderate support for protection from road congestion."
+    },
+    {
+      "id": "B06",
+      "direction": "B",
+      "text": "The rail proposal includes level boarding at every station.",
+      "relevance": 2,
+      "strength": 2,
+      "weight": 4,
+      "dimension": "accessibility",
+      "interpretation": "Provides limited-to-moderate support for consistent boarding accessibility."
+    },
+    {
+      "id": "B07",
+      "direction": "B",
+      "text": "A fictional university model predicts modest commercial development near three proposed stations.",
+      "relevance": 3,
+      "strength": 1,
+      "weight": 3,
+      "dimension": "land_use",
+      "interpretation": "Weakly supports possible development effects; the estimate is uncertain."
+    },
+    {
+      "id": "B08",
+      "direction": "B",
+      "text": "A local design survey rated the proposed rail vehicles slightly more positively than the proposed buses.",
+      "relevance": 3,
+      "strength": 1,
+      "weight": 3,
+      "dimension": "public_design_preference",
+      "interpretation": "Weakly supports aesthetic preference; it is not evidence of transport performance."
+    }
+  ]
+}
