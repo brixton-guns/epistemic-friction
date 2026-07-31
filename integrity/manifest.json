@@ -25,6 +25,6 @@
     "rubrics/reasoning_quality.md": "7ff8e19ac996133708db2bafde4f6d65279a0c34c0bfecdfea18b5b94c2430cc",
     "src/epistemic_friction/__init__.py": "3bae2d8333eb7120c0db6dd09bcbe96eeebba8ccf155ecac30c33aa91f793efa",
     "src/epistemic_friction/validate.py": "121b0925522bac623530f8ae87b6104f9c7c7f8c338bb1ca7a7ecf93c4397c44",
-    "tests/test_validation.py": "b0ca366f79d01a0795459d1ec7b8ec891a84421e7143584ca82ea8c183e30dec"
+    "tests/test_validation.py": "1d44ae19b957b42b178ac4977c69143d219e039eeb5ee4615b5d676851c6865b"
   }
 }
