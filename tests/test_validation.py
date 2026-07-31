@@ -54,6 +54,7 @@ class FirstStoneTests(unittest.TestCase):
             for path in self.root.rglob("*")
             if path.is_file()
             and path != manifest_path
+            and ".git" not in path.parts
             and "__pycache__" not in path.parts
         }
         self.assertEqual(set(manifest["files"]), expected)
