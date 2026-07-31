@@ -1,0 +1,41 @@
+{
+  "case_id": "case-001-transit",
+  "questions": [
+    {
+      "id": "R01",
+      "question": "Which option can begin carrying passengers after 18 months?",
+      "answer": "A",
+      "fact_id": "A01"
+    },
+    {
+      "id": "R02",
+      "question": "Which option is projected to carry more passengers per vehicle-hour?",
+      "answer": "B",
+      "fact_id": "B01"
+    },
+    {
+      "id": "R03",
+      "question": "Which option can alter routes annually?",
+      "answer": "A",
+      "fact_id": "A03"
+    },
+    {
+      "id": "R04",
+      "question": "Which option has fully separated lanes for most of its route?",
+      "answer": "B",
+      "fact_id": "B05"
+    },
+    {
+      "id": "R05",
+      "question": "Which option has the lower estimated initial capital cost?",
+      "answer": "A",
+      "fact_id": "A04"
+    },
+    {
+      "id": "R06",
+      "question": "Which option has the longer expected vehicle service life?",
+      "answer": "B",
+      "fact_id": "B03"
+    }
+  ]
+}
