@@ -1,0 +1,26 @@
+name: Validate First Stone
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate registered materials
+        run: PYTHONPATH=src python -m epistemic_friction.validate
+
+      - name: Run tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -v

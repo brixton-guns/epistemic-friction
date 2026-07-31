@@ -1,0 +1,122 @@
+{
+  "case_id": "case-001-transit",
+  "policy": "Ratios are computed from registered evidential weight relative to the participant's initial choice.",
+  "initial_choices": {
+    "A": {
+      "continuity": {
+        "fact_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "B01",
+          "B05"
+        ],
+        "declared_weight": {
+          "support": 28,
+          "oppose": 12
+        }
+      },
+      "neutral": {
+        "fact_ids": [
+          "A01",
+          "A02",
+          "A05",
+          "B01",
+          "B02",
+          "B05"
+        ],
+        "declared_weight": {
+          "support": 20,
+          "oppose": 20
+        }
+      },
+      "friction": {
+        "fact_ids": [
+          "A01",
+          "A05",
+          "B01",
+          "B02",
+          "B03",
+          "B04"
+        ],
+        "declared_weight": {
+          "support": 12,
+          "oppose": 28
+        }
+      },
+      "static_neutral": {
+        "fact_ids": [
+          "A01",
+          "A02",
+          "A05",
+          "B01",
+          "B02",
+          "B05"
+        ],
+        "declared_weight": {
+          "support": 20,
+          "oppose": 20
+        }
+      }
+    },
+    "B": {
+      "continuity": {
+        "fact_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "A01",
+          "A05"
+        ],
+        "declared_weight": {
+          "support": 28,
+          "oppose": 12
+        }
+      },
+      "neutral": {
+        "fact_ids": [
+          "B01",
+          "B02",
+          "B05",
+          "A01",
+          "A02",
+          "A05"
+        ],
+        "declared_weight": {
+          "support": 20,
+          "oppose": 20
+        }
+      },
+      "friction": {
+        "fact_ids": [
+          "B01",
+          "B05",
+          "A01",
+          "A02",
+          "A03",
+          "A04"
+        ],
+        "declared_weight": {
+          "support": 12,
+          "oppose": 28
+        }
+      },
+      "static_neutral": {
+        "fact_ids": [
+          "B01",
+          "B02",
+          "B05",
+          "A01",
+          "A02",
+          "A05"
+        ],
+        "declared_weight": {
+          "support": 20,
+          "oppose": 20
+        }
+      }
+    }
+  }
+}
