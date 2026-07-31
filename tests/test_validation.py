@@ -6,7 +6,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from epistemic_friction.validate import ValidationError, run_validation, sha256
+from epistemic_friction.validate import (
+    ValidationError,
+    manifest_scope_files,
+    run_validation,
+    sha256,
+)
 
 
 class FirstStoneTests(unittest.TestCase):
@@ -49,14 +54,7 @@ class FirstStoneTests(unittest.TestCase):
     def test_manifest_covers_repository_files(self) -> None:
         manifest_path = self.root / "integrity" / "manifest.json"
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        expected = {
-            str(path.relative_to(self.root))
-            for path in self.root.rglob("*")
-            if path.is_file()
-            and path != manifest_path
-            and ".git" not in path.parts
-            and "__pycache__" not in path.parts
-        }
+        expected = manifest_scope_files(self.root, manifest_path)
         self.assertEqual(set(manifest["files"]), expected)
 
 

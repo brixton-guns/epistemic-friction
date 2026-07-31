@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from epistemic_friction.audit import AuditValidationError, validate_audit_assets
+
 REQUIRED_ARMS = {"continuity", "neutral", "friction", "static_neutral"}
 EXPECTED_RATIOS = {
     "continuity": (0.70, 0.30),
@@ -14,6 +16,15 @@ EXPECTED_RATIOS = {
     "static_neutral": (0.50, 0.50),
 }
 TOLERANCE = 1e-9
+MANIFEST_EXCLUDED_DIRS = {
+    ".git",
+    "__pycache__",
+    ".pytest_cache",
+    ".venv",
+    "venv",
+    "build",
+    "dist",
+}
 
 
 class ValidationError(RuntimeError):
@@ -39,6 +50,21 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(65536), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def manifest_scope_files(root: Path, manifest_path: Path) -> set[str]:
+    """Return source artifacts covered by the integrity manifest."""
+    return {
+        str(path.relative_to(root))
+        for path in root.rglob("*")
+        if path.is_file()
+        and path != manifest_path
+        and path.name != ".DS_Store"
+        and not any(
+            part in MANIFEST_EXCLUDED_DIRS or part.endswith(".egg-info")
+            for part in path.parts
+        )
+    }
 
 
 def validate_registry(registry: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -164,6 +190,17 @@ def verify_manifest(root: Path) -> list[str]:
     if not isinstance(entries, dict) or not entries:
         raise ValidationError("integrity manifest has no files")
 
+    expected_files = manifest_scope_files(root, manifest_path)
+    missing_entries = sorted(expected_files - set(entries))
+    stale_entries = sorted(set(entries) - expected_files)
+    if missing_entries or stale_entries:
+        details: list[str] = []
+        if missing_entries:
+            details.append("unhashed files: " + ", ".join(missing_entries))
+        if stale_entries:
+            details.append("stale manifest entries: " + ", ".join(stale_entries))
+        raise ValidationError("manifest scope mismatch\n" + "\n".join(details))
+
     messages: list[str] = []
     for relative, expected in sorted(entries.items()):
         path = root / relative
@@ -189,13 +226,14 @@ def run_validation(root: Path | None = None) -> list[str]:
     messages = [
         f"registry: PASS ({len(facts)} facts, balanced total weight)",
         *validate_plans(plans, facts),
+        *validate_audit_assets(root),
         *verify_manifest(root),
     ]
     return messages
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate the Epistemic Friction First Stone")
+    parser = argparse.ArgumentParser(description="Validate the Epistemic Friction protocols")
     parser.add_argument(
         "--root",
         type=Path,
@@ -206,7 +244,7 @@ def main() -> int:
 
     try:
         messages = run_validation(args.root)
-    except ValidationError as exc:
+    except (ValidationError, AuditValidationError) as exc:
         print(f"EPISTEMIC FRICTION VALIDATION: FAIL\n{exc}")
         return 1
 

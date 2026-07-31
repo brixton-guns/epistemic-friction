@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/epistemic-friction/selection-output-v0.2.0.schema.json",
+  "title": "Epistemic Friction Selection Output v0.2.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "selected_evidence"
+  ],
+  "properties": {
+    "selected_evidence": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^E[0-9]{2}$"
+      }
+    }
+  }
+}
