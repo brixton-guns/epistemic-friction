@@ -2,6 +2,8 @@ name: Validate First Stone
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 permissions:
