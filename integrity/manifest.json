@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "version": "0.1.0",
+  "scope": "all repository files except this manifest",
+  "files": {
+    ".github/workflows/validate.yml": "f2f0cdee3d36e7fc9dc099808eadd0298cf29ef5e6cf7a500496c72e74a69230",
+    ".gitignore": "303b986e4916e3347bd19a8ccbd26b0afe9e9bd16acee67480efd778582ddadf",
+    "CHANGELOG.md": "d8e750250d0136eec7b8e284ce16669dc7f8974437f9683bec7b048d24680ecb",
+    "LICENSE": "df590ce268ded7a5c77abdd3e067a6b8d7b165502a8caec39706117481746af1",
+    "README.md": "398a5d0cff186ea94c8e303589a4ed30c7f736734f08db073e96443c17818549",
+    "SPEC.md": "a2ec4ab2ef47c36a7e6c71b56db82effad0b8ff09a60062b7edcc2ae61ccb0c2",
+    "analysis/README.md": "070e9f9f9874b58160d211cc2430115b57485a603e81c46036dffbbf4d492c68",
+    "cases/case-001-transit/condition_plans.json": "4b18ae15b43ad390991eda0c73f2b6db5f39034faa24504677af2d2c973745e6",
+    "cases/case-001-transit/fact_registry.json": "b6df688cb22b9c3a1baec39f2c253a5156e22c85ca34349b86a2452fe51ef069",
+    "cases/case-001-transit/recall_questions.json": "b9b5ef646d71c579a709f8b62917ac605f03e48bff8f4c4d159625dce6d2c0a6",
+    "cases/case-001-transit/scenario.md": "e98b88e47c67d91fb9159e4e527a3ddd1d64c2041f4602bac05566c116f4200f",
+    "cases/case-001-transit/validation.md": "6d36e52a2d7db5ad57a1332556f3ee7c893c198566a5dc9bbe9bcd7b63b50107",
+    "data/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prompts/base_system.md": "1aabdac21e0fcb29249367cbb31e53278fa672ed7c127c525dead4ed86d10220",
+    "prompts/continuity.md": "1a4553899244f54356f067cbb4a4658e47a70b2c144661c6e018ca14c28bdfe1",
+    "prompts/friction.md": "7e602a39f9f06b6e0966d561042db1e19db25571345b7149d8f635e5ebfabe28",
+    "prompts/neutral.md": "7b8c19425874dbd08ef7fa49803fa9ec9c18ef399fe637625806d2fbf37cb487",
+    "prompts/static_neutral.md": "9d31c95f811dbc2023748aa9f8ad01cea8690ffe7489b4784fde2408af88ef18",
+    "pyproject.toml": "4b93d13de73557c0665e3df134ebcc978dc30ed905277b4a24026b90a7b2fedf",
+    "rubrics/reasoning_quality.md": "7ff8e19ac996133708db2bafde4f6d65279a0c34c0bfecdfea18b5b94c2430cc",
+    "src/epistemic_friction/__init__.py": "3bae2d8333eb7120c0db6dd09bcbe96eeebba8ccf155ecac30c33aa91f793efa",
+    "src/epistemic_friction/validate.py": "121b0925522bac623530f8ae87b6104f9c7c7f8c338bb1ca7a7ecf93c4397c44",
+    "tests/test_validation.py": "4acfe4e203ea3dd2f10a1a3355a237a7fb5e1d08848ac17825d36c4536bd2648"
+  }
+}
