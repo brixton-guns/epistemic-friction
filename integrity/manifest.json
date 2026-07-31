@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scope": "all repository files except this manifest",
   "files": {
-    ".github/workflows/validate.yml": "f2f0cdee3d36e7fc9dc099808eadd0298cf29ef5e6cf7a500496c72e74a69230",
+    ".github/workflows/validate.yml": "318ea5794f87a78c880f87d1d7b63d414b8ee7fbc4eef32e0bbb4b40a76701fa",
     ".gitignore": "303b986e4916e3347bd19a8ccbd26b0afe9e9bd16acee67480efd778582ddadf",
     "CHANGELOG.md": "d8e750250d0136eec7b8e284ce16669dc7f8974437f9683bec7b048d24680ecb",
     "LICENSE": "df590ce268ded7a5c77abdd3e067a6b8d7b165502a8caec39706117481746af1",
@@ -25,6 +25,6 @@
     "rubrics/reasoning_quality.md": "7ff8e19ac996133708db2bafde4f6d65279a0c34c0bfecdfea18b5b94c2430cc",
     "src/epistemic_friction/__init__.py": "3bae2d8333eb7120c0db6dd09bcbe96eeebba8ccf155ecac30c33aa91f793efa",
     "src/epistemic_friction/validate.py": "121b0925522bac623530f8ae87b6104f9c7c7f8c338bb1ca7a7ecf93c4397c44",
-    "tests/test_validation.py": "4acfe4e203ea3dd2f10a1a3355a237a7fb5e1d08848ac17825d36c4536bd2648"
+    "tests/test_validation.py": "b0ca366f79d01a0795459d1ec7b8ec891a84421e7143584ca82ea8c183e30dec"
   }
 }
