@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "epistemic-friction"
-version = "0.1.0"
-description = "An open, falsifiable framework for testing conversational inertia and epistemic calibration"
+version = "0.2.0"
+description = "Open protocols for auditing evidence selection and testing epistemic calibration"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
@@ -14,6 +14,7 @@ dependencies = []
 
 [project.scripts]
 epistemic-friction-validate = "epistemic_friction.validate:main"
+epistemic-friction-render-audit = "epistemic_friction.audit:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

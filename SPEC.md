@@ -1,10 +1,10 @@
 # Epistemic Friction
 ## Conversational Inertia and Epistemic Calibration
-### Pilot Specification v0.1 — First Stone
+### Human-Impact Pilot Specification v0.1.1 — First Stone
 
-**Status:** preregistered design draft  
-**Study type:** exploratory randomized controlled pilot  
-**Primary object:** confidence growth relative to reasoning-quality growth  
+**Status:** prospective protocol draft; not yet preregistered
+**Study type:** exploratory randomized controlled pilot
+**Primary object:** confidence growth relative to reasoning-quality growth
 **Evidence status:** no empirical evidence has yet been collected
 
 ---
@@ -14,6 +14,8 @@
 Does an assistant that preferentially develops a user's initial position increase confidence more than it improves the quality of the user's reasons?
 
 The study does not assume intention, manipulation, self-awareness, or privileged model introspection. The proposed mechanism is conversational inertia: a system optimized to continue an exchange smoothly may extend the frame already present instead of interrupting it.
+
+This human-impact track does not test whether a model spontaneously selects stance-congruent evidence. Its evidence bundles are fixed by the experimenter before the interaction. Spontaneous model selection is tested separately in the [Model-Selection Audit](audit/SPEC.md).
 
 ## 2. Core hypothesis
 
@@ -116,14 +118,16 @@ Inter-rater reliability must be reported. If total-score reliability is below 0.
 
 ## 8. Pilot sample
 
-Target: 48 participants, 12 per arm.  
-Permitted range: 40–60.
+Provisional first-case feasibility target: 48 participants, 12 per arm.
+Provisional permitted range: 40–60.
 
-The pilot estimates variance, manipulation quality, fatigue, rubric reliability, and case dependence. It is not confirmatory.
+The pilot estimates variance, manipulation quality, fatigue, and rubric reliability. It is not confirmatory.
+
+Participant recruitment may not begin under this specification. Before recruitment, the repository must add at least two further cases, define whether case exposure is between- or within-participant, justify the sample size, freeze allocation and exclusion rules, and register the resulting protocol externally. Until then, the target above is a planning value rather than an approved sample plan.
 
 ## 9. Criteria that weaken or kill the hypothesis
 
-The hypothesis is weakened if:
+If a later registered study contains three cases, the hypothesis is weakened if:
 
 - Continuity does not exceed Neutral in Calibration Gap in at least two of three cases;
 - confidence and reasoning quality rise proportionally;
@@ -133,6 +137,8 @@ The hypothesis is weakened if:
 - evaluator reliability is inadequate;
 - Static Neutral matches or exceeds Continuity;
 - a larger confirmatory study fails to reproduce the effect.
+
+With only Case 001 present, the two-of-three criterion cannot yet be evaluated and no cross-case claim is permitted.
 
 Null and contradictory results must be published.
 
@@ -167,6 +173,8 @@ The First Stone passes only if:
 ## 12. Stop rule
 
 After participant data become visible, no arm, outcome, hypothesis, or case may be added silently. Any change must be versioned, justified, prospective, and labeled exploratory where necessary.
+
+Repository hashes document file integrity only. They do not establish that this draft was externally preregistered.
 
 ## 13. Final standard
 

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/epistemic-friction/synthesis-output-v0.2.0.schema.json",
+  "title": "Epistemic Friction Synthesis Output v0.2.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "assessment_option_a"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "undecided"
+      ]
+    },
+    "assessment_option_a": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}
